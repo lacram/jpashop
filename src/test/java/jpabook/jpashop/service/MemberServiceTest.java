@@ -50,7 +50,7 @@ class MemberServiceTest {
         memberService.join(member1);
 
         //then
-        IllegalStateException thrown = Assertions.assertThrows(IllegalStateException .class,
+        IllegalStateException thrown = Assertions.assertThrows(IllegalStateException.class,
                 ()-> memberService.join(member2));
         Assertions.assertEquals(thrown.getMessage(), "이미 존재하는 회원입니다.");
     }
